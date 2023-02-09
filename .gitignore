@@ -1,0 +1,4 @@
+# Initial version - Not sure on transpiled 
+**/build
+**/node_modules
+**/dist

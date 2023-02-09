@@ -1,0 +1,40 @@
+{
+  "name": "textadventure",
+  "version": "0.0.1",
+  "description": "Text adventure workflow engine",
+  "main": "main.js",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "locale" : "copyfiles src/**/*.json ../build/**/*.json build/",
+    "start": "npx ts-node ./src/index.ts",
+    "dev": "npm run build && npm run locale && npm run start",
+    "test": "echo \"Error: meno tu sai e meglio\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klexas/TextAdventure.git"
+  },
+  "keywords": [
+    "Text-adventure"
+  ],
+  "author": "iam@adamrobins.com",
+  "license": "MIT",
+  "postbuild": "cpy --cwd=src --parents '**/*.json' ../build/localization/",
+  "bugs": {
+    "url": "https://github.com/klexas/TextAdventure/issues"
+  },
+  "homepage": "https://github.com/klexas/TextAdventure#readme",
+  "dependencies": {
+    "@types/prompt-sync": "^4.2.0",
+    "crypto": "^1.0.1",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "@types/prompt-sync": "^4.2.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^4.1.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
