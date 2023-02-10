@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 const generateUuid = () => {
-    return [4, 2, 2, 2, 6] // or 8-4-4-4-12 in hex
+    return [4, 2, 2, 2, 6] // TODO2 : if hex req : 8-4-4-4-12
       .map(group => crypto.randomBytes(group).toString('hex'))
       .join('-');
   };
