@@ -8,11 +8,10 @@ const prompt = PromptSync();
 // Main 
 async function main() {
     const locale = await Locale.load('en');
-
-    console.log(locale.start);
+    console.log(locale.welcome);
     const user = prompt('Enter your Name: ');
 
-    console.log(locale.welcome, user);
+
 
 }
 
