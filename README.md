@@ -26,6 +26,14 @@ Clone repo. Jump into folder.
 
 `npm install`
 
+to run local 
+
+`npm run dev`
+
+It will transpile and run . 
+
+Scripts are in packages.json under "scripts".
+
 This should set you up. If not, you will nee the following packages : 
 "typescript" 			- Transpile TypeScript to JS
 "ts-node"				- See above JIT 
